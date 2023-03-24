@@ -28,7 +28,7 @@ def main():
     call(['mysql', '-e', 'CREATE DATABASE IF NOT EXISTS fashionista;'])
 
     _print_header('Syncing db')
-    call(['python', 'fashionsite/manage.py', 'syncdb', '--no-input'])
+    call(['python', 'fashionsite/manage.py', 'syncdb', '--noinput'])
     call(['python', 'fashionsite/manage.py', 'migrate', 'chardata'])
     call(['chmod', '777', 'fashionsite'])
 
